@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STORMBREAK</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #07090c; color: #f3efe6; user-select: none;
+    font-family: 'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  canvas { display: block; }
+  #hud { position: fixed; inset: 0; pointer-events: none; }
+  #boot { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column;
+    background: #07090c; font: 700 14px/1 'Avenir Next', sans-serif; letter-spacing: .4em; transition: opacity .6s; z-index: 50; }
+  #boot.done { opacity: 0; pointer-events: none; }
+  #bootbar { width: 260px; height: 2px; background: #222; margin-top: 18px; } #bootfill { height: 100%; width: 0; background: #e8452c; transition: width .2s; }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "./vendor/three/build/three.module.js",
+  "three/addons/": "./vendor/three/examples/jsm/",
+  "rapier": "./vendor/rapier/dist/rapier.mjs"
+} }
+</script>
+</head>
+<body>
+<div id="hud"></div>
+<div id="boot">STORMBREAK<div id="bootbar"><div id="bootfill"></div></div><div id="bootmsg" style="margin-top:14px;font-size:10px;letter-spacing:.2em;opacity:.6"></div></div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
